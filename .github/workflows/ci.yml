@@ -58,15 +58,14 @@ jobs:
           ./gradlew checkstyleMain checkstyleTest
       
       - name: List team members
-        if: github.event_name == 'pull_request'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "Получение списка участников команды..."
+          echo "👥 Получение списка участников команды..."
           python3 scripts/check_pr.py \
             --token "$GITHUB_TOKEN" \
             --repo "${{ github.repository }}" \
-            --pr-number "${{ github.event.pull_request.number }}" \
+            --pr-number "1" \
             --list-members
       
       - name: Check PR size

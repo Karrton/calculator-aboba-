@@ -59,7 +59,7 @@ jobs:
       
       - name: List team members
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           echo "Получение списка участников команды..."
           python3 scripts/check_pr.py \

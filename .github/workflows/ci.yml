@@ -65,7 +65,6 @@ jobs:
           python3 scripts/check_pr.py \
             --token "$GITHUB_TOKEN" \
             --repo "${{ github.repository }}" \
-            --pr-number "1" \
             --list-members
       
       - name: Check PR size

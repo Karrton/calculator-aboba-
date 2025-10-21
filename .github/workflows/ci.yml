@@ -74,7 +74,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "📏 Проверка размера PR..."
+          echo "Проверка размера PR..."
           python3 scripts/check_pr.py \
             --token "$GITHUB_TOKEN" \
             --repo "${{ github.repository }}" \
@@ -122,7 +122,7 @@ jobs:
       
       - name: Build with Gradle
         run: |
-          echo "🔨 Запуск сборки приложения..."
+          echo "Запуск сборки приложения..."
           ./gradlew build -x test
       
       - name: Build Fat JAR

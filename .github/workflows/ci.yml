@@ -183,11 +183,12 @@ jobs:
           name: test-reports
           path: build/reports/tests/
           retention-days: 7
+
   publish:
     name: Stage 4 - Publish Build
     runs-on: ubuntu-latest
     needs: build
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop')
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout code
@@ -207,9 +208,6 @@ jobs:
           path: build/libs/
 
       - name: Create GitHub Release
-        if: github.ref == 'refs/heads/main'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "Создание GitHub Release для main..."
           VERSION=$(date +%Y%m%d)-$(git rev-parse --short HEAD)
@@ -218,12 +216,3 @@ jobs:
             --notes "Автоматический релиз для коммита $(git rev-parse --short HEAD)" \
             build/libs/*.jar \
             --repo "${{ github.repository }}"
-
-      - name: Publish to Internal Repository
-        env:
-          REPO_URL: ${{ secrets.INTERNAL_REPO_URL }}
-          REPO_USER: ${{ secrets.INTERNAL_REPO_USER }}
-          REPO_PASS: ${{ secrets.INTERNAL_REPO_PASS }}
-        run: |
-          echo "Публикация артефактов в внутренний репозиторий..."
-          ./gradlew publish -PrepoUrl=$REPO_URL -PrepoUser=$REPO_USER -PrepoPass=$REPO_PASS

@@ -1,0 +1,102 @@
+name: Calculator CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - 'epic/**'
+      - 'feature/**'
+      - 'bugfix/**'
+      - 'refactor/**'
+  pull_request:
+    branches:
+      - main
+      - develop
+      - 'epic/**'
+
+env:
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+jobs:
+  # ============================================
+  # STAGE 1: Checkstyle + GitHub API
+  # ============================================
+  checkstyle:
+    name: Stage 1 - Code Quality & PR Check
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'gradle'
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install PyGithub requests
+      
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      
+      - name: Run Checkstyle
+        run: |
+          echo "🔍 Запуск проверки кода (Checkstyle)..."
+          ./gradlew checkstyleMain checkstyleTest
+      
+      - name: List team members
+        if: github.event_name == 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "👥 Получение списка участников команды..."
+          python3 scripts/check_pr.py \
+            --token "$GITHUB_TOKEN" \
+            --repo "${{ github.repository }}" \
+            --pr-number "${{ github.event.pull_request.number }}" \
+            --list-members
+      
+      - name: Check PR size
+        if: github.event_name == 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "📏 Проверка размера PR..."
+          python3 scripts/check_pr.py \
+            --token "$GITHUB_TOKEN" \
+            --repo "${{ github.repository }}" \
+            --pr-number "${{ github.event.pull_request.number }}" \
+            --check-size
+      
+      - name: Update epic PR description
+        if: github.event_name == 'pull_request' && contains(github.head_ref, 'epic/')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "📝 Обновление описания epic PR..."
+          python3 scripts/check_pr.py \
+            --token "$GITHUB_TOKEN" \
+            --repo "${{ github.repository }}" \
+            --pr-number "${{ github.event.pull_request.number }}" \
+            --update-epic
+      
+      - name: Upload Checkstyle reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: checkstyle-reports
+          path: build/reports/checkstyle/
+          retention-days: 1

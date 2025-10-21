@@ -155,7 +155,7 @@ jobs:
   tests:
     name: Stage 3 - Unit Tests
     runs-on: ubuntu-latest
-    needs: checkstyle
+    needs: build
     
     steps:
       - name: Checkout code

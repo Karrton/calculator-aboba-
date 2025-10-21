@@ -54,7 +54,7 @@ jobs:
       
       - name: Run Checkstyle
         run: |
-          echo "🔍 Запуск проверки кода (Checkstyle)..."
+          echo "Запуск проверки кода (Checkstyle)..."
           ./gradlew checkstyleMain checkstyleTest
       
       - name: List team members
@@ -62,7 +62,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "👥 Получение списка участников команды..."
+          echo "Получение списка участников команды..."
           python3 scripts/check_pr.py \
             --token "$GITHUB_TOKEN" \
             --repo "${{ github.repository }}" \
@@ -86,7 +86,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "📝 Обновление описания epic PR..."
+          echo "Обновление описания epic PR..."
           python3 scripts/check_pr.py \
             --token "$GITHUB_TOKEN" \
             --repo "${{ github.repository }}" \
@@ -127,12 +127,12 @@ jobs:
       
       - name: Build Fat JAR
         run: |
-          echo "📦 Создание fat JAR файла..."
+          echo "Создание fat JAR файла..."
           ./gradlew fatJar
       
       - name: List build artifacts
         run: |
-          echo "📋 Артефакты сборки:"
+          echo "Артефакты сборки:"
           ls -lah build/libs/
       
       - name: Upload build artifacts
@@ -173,7 +173,7 @@ jobs:
       
       - name: Run tests
         run: |
-          echo "🧪 Запуск unit тестов..."
+          echo "Запуск unit тестов..."
           ./gradlew test
       
       - name: Upload test reports

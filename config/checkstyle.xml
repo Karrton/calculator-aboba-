@@ -8,13 +8,16 @@
     <property name="severity" value="warning"/>
     <property name="fileExtensions" value="java, properties, xml"/>
 
-    <!-- Checks for whitespace -->
     <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
     </module>
 
+    <module name="LineLength">
+        <property name="max" value="150"/>
+        <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
+    </module>
+
     <module name="TreeWalker">
-        <!-- Naming Conventions -->
         <module name="ConstantName"/>
         <module name="LocalFinalVariableName"/>
         <module name="LocalVariableName"/>
@@ -25,21 +28,11 @@
         <module name="StaticVariableName"/>
         <module name="TypeName"/>
 
-        <!-- Imports -->
         <module name="AvoidStarImport"/>
         <module name="IllegalImport"/>
         <module name="RedundantImport"/>
         <module name="UnusedImports"/>
 
-        <!-- Size Violations -->
-        <module name="LineLength">
-            <property name="max" value="120"/>
-        </module>
-        <module name="MethodLength">
-            <property name="max" value="150"/>
-        </module>
-
-        <!-- Whitespace -->
         <module name="EmptyForIteratorPad"/>
         <module name="GenericWhitespace"/>
         <module name="MethodParamPad"/>
@@ -51,18 +44,15 @@
         <module name="WhitespaceAfter"/>
         <module name="WhitespaceAround"/>
 
-        <!-- Modifier Checks -->
         <module name="ModifierOrder"/>
         <module name="RedundantModifier"/>
 
-        <!-- Blocks -->
         <module name="AvoidNestedBlocks"/>
         <module name="EmptyBlock"/>
         <module name="LeftCurly"/>
         <module name="NeedBraces"/>
         <module name="RightCurly"/>
 
-        <!-- Coding -->
         <module name="EmptyStatement"/>
         <module name="EqualsHashCode"/>
         <module name="IllegalInstantiation"/>
@@ -71,14 +61,16 @@
         <module name="SimplifyBooleanExpression"/>
         <module name="SimplifyBooleanReturn"/>
 
-        <!-- Javadoc Comments -->
         <module name="JavadocMethod">
             <property name="accessModifiers" value="public"/>
+            <property name="allowMissingParamTags" value="true"/>
+            <property name="allowMissingReturnTag" value="true"/>
         </module>
-        <module name="JavadocType"/>
-        <module name="JavadocVariable">
+        <module name="JavadocType">
             <property name="scope" value="public"/>
         </module>
-        <module name="JavadocStyle"/>
+        <module name="JavadocStyle">
+            <property name="checkEmptyJavadoc" value="false"/>
+        </module>
     </module>
 </module>

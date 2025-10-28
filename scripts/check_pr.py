@@ -165,7 +165,7 @@ def check_pr_size(gh, repo_name: str, pr_number: int):
         print(f"   Type: {pr_type[0]}")
         
         # Для epic PR нет лимита
-        if pr_type == PRType.EPIC:
+        if line_limit is None:
             print(f"Epic PR - лимит строк не применяется")
             print("=" * 60 + "\n")
             return

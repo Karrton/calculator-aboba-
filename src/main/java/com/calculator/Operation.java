@@ -6,6 +6,7 @@ package com.calculator;
 public enum Operation {
     /**
      * Операция сложения.
+     * Операция умножения.
      */
     ADD("+"),
     

@@ -26,4 +26,15 @@ public class Calculator {
     public double subtract(double a, double b) {
         return a - b;
     }
+
+    /**
+     * Умножение двух чисел.
+     *
+     * @param a первое число
+     * @param b второе число
+     * @return произведение чисел
+     */
+    public double multiply(double a, double b) {
+        return a * b;
+    }
 }

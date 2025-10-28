@@ -9,6 +9,7 @@ import sys
 from typing import List, Dict, Optional
 from github import Github, GithubException, Auth
 
+UNLIMIT_VALUE = 99999999
 
 class PRType:
     """Типы PR и их лимиты по строкам"""
@@ -57,7 +58,6 @@ def parse_arguments():
     
     return parser.parse_args()
 
-
 def get_pr_type(branch_name: str) -> tuple:
     """
     Определяет тип PR по имени ветки
@@ -71,16 +71,16 @@ def get_pr_type(branch_name: str) -> tuple:
     branch_lower = branch_name.lower()
     
     if 'epic/' in branch_lower:
-        return PRType.EPIC
-    elif 'feature/' in branch_lower:
-        return PRType.FEATURE
+        return (PRType.EPIC, UNLIMIT_VALUE)
     elif 'refactor/' in branch_lower:
-        return PRType.REFACTOR
+        return (PRType.REFACTOR, 400)
     elif 'bugfix/' in branch_lower or 'fix/' in branch_lower:
-        return PRType.BUGFIX
+        return (PRType.BUGFIX, 150)
+    elif 'feature/' in branch_lower:
+        return (PRType.FEATURE, 300)
     else:
         # По умолчанию считаем feature
-        return PRType.FEATURE
+        return (PRType.FEATURE, 300)
 
 
 def list_project_members(gh, repo_name: str):

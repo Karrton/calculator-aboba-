@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Тесты для класса Calculator.
+ * Тесты еще раз
  */
 class CalculatorTest {
     private Calculator calculator;

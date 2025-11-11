@@ -25,6 +25,9 @@ public final class Main {
         double result2 = calculator.subtract(10, 4);
         System.out.println("10 - 4 = " + result2);
         
+        double result4 = calculator.sqrt(16);
+        System.out.println("√16 = " + result4);
+        
         System.out.println("Calculator works!");
     }
 }

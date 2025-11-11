@@ -12,7 +12,12 @@ public enum Operation {
     /**
      * Операция вычитания.
      */
-    SUBTRACT("-");
+    SUBTRACT("-"),
+
+    /**
+     * Операция извлечения квадратного корня.
+     */
+    SQRT("√");
 
     private final String symbol;
 

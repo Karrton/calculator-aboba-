@@ -13,6 +13,6 @@
 - [Issues](https://github.com/Karrton/calculator-aboba-/issues)
 
 #### Ссылки на отдельные задачи:
-- [Задача на добавление операции "Модуль"(в работе)](https://github.com/Karrton/calculator-aboba-/issues/29) - [прикрепленная ветка](https://github.com/Karrton/calculator-aboba-/tree/feat%2F29-add-the-moduloremainder-operation-modulo)
+- [Задача на добавление операции "Модуль"](https://github.com/Karrton/calculator-aboba-/issues/29) - [прикрепленная ветка](https://github.com/Karrton/calculator-aboba-/tree/feat%2F29-add-the-moduloremainder-operation-modulo)
 - [Задача на добавление операции "Модуль"(выполнена)](https://github.com/Karrton/calculator-aboba-/issues/26) - [прикрепленная ветка](https://github.com/Karrton/calculator-aboba-/tree/feat/26-add-function-sqrt)
-- [Задача на добавление операции "Степень"(в работе)](https://github.com/Karrton/calculator-aboba-/issues/27) - [прикрепленная ветка](https://github.com/Karrton/calculator-aboba-/tree/feat%2F27-add-the-power-operation)
+- [Задача на добавление операции "Степень"](https://github.com/Karrton/calculator-aboba-/issues/27) - [прикрепленная ветка](https://github.com/Karrton/calculator-aboba-/tree/feat%2F27-add-the-power-operation)

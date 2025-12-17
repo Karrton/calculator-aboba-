@@ -28,6 +28,32 @@ public class Calculator {
     }
 
     /**
+     * Умножение двух чисел.
+     *
+     * @param a первое число
+     * @param b второе число
+     * @return произведение чисел
+     */
+    public double multiply(double a, double b) {
+        return a * b;
+    }
+
+    /**
+     * Деление двух чисел.
+     *
+     * @param a делимое
+     * @param b делитель
+     * @return частное чисел
+     * @throws IllegalArgumentException если делитель равен нулю
+     */
+    public double divide(double a, double b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Cannot divide by zero");
+        }
+        return a / b;
+    }
+
+    /**
      * Извлечение квадратного корня.
      *
      * @param a число, из которого извлекается корень

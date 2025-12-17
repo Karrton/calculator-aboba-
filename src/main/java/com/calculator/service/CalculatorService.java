@@ -54,6 +54,26 @@ public class CalculatorService {
                 expression = a + " - " + b + " = " + result;
                 break;
 
+            case "MULTIPLY":
+            case "×":
+            case "*":
+                if (b == null) {
+                    throw new IllegalArgumentException("Second operand is required for MULTIPLY operation");
+                }
+                result = calculator.multiply(a, b);
+                expression = a + " × " + b + " = " + result;
+                break;
+
+            case "DIVIDE":
+            case "÷":
+            case "/":
+                if (b == null) {
+                    throw new IllegalArgumentException("Second operand is required for DIVIDE operation");
+                }
+                result = calculator.divide(a, b);
+                expression = a + " ÷ " + b + " = " + result;
+                break;
+
             case "SQRT":
             case "√":
                 result = calculator.sqrt(a);

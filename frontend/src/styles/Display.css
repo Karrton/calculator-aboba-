@@ -1,0 +1,26 @@
+.display-container {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: right;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.display-expression {
+  font-size: 14px;
+  color: #888;
+  min-height: 20px;
+  margin-bottom: 5px;
+}
+
+.display-value {
+  font-size: 36px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

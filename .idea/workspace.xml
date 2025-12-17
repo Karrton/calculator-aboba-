@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="39d70511-79d8-4476-b27c-3fa8014c0f0d" name="Changes" comment="feat: add test to calculator" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="test/two_unit_and_integration" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;BerdyshevDaniil&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Karrton/calculator-aboba-.git&quot;,
+    &quot;accountId&quot;: &quot;2329b5e7-1262-40e2-83d9-73481d9e4e2d&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;Karrton&quot;,
+    &quot;repository&quot;: &quot;calculator-aboba-&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="34O7RXbZ3dT9rpNhwHYQYi9qoTK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.calculator-aboba- [:com.calculator.Main.main()].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "epic/fullstack-calculator",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.calculator" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39d70511-79d8-4476-b27c-3fa8014c0f0d" name="Changes" comment="" />
+      <created>1761072757115</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761072757115</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Фикс ci.yml">
+      <option name="closed" value="true" />
+      <created>1761074158153</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761074158153</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fix ci.yml">
+      <option name="closed" value="true" />
+      <created>1761075055427</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761075055427</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fix ci.yml">
+      <option name="closed" value="true" />
+      <created>1761075264287</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761075264287</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add stage 4 - publish in ci.yml">
+      <option name="closed" value="true" />
+      <created>1761077362077</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761077362077</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update stage 4 - publish in ci.yml">
+      <option name="closed" value="true" />
+      <created>1761078440363</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761078440363</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update stage 4 - publish in ci.yml">
+      <option name="closed" value="true" />
+      <created>1761078705385</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1761078705385</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Update stage 4 - publish in ci.yml">
+      <option name="closed" value="true" />
+      <created>1761079112774</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1761079112774</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update stage 4 - publish in ci.yml">
+      <option name="closed" value="true" />
+      <created>1761079627626</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1761079627626</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update stage 4 - publish in ci.yml">
+      <option name="closed" value="true" />
+      <created>1761080016044</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1761080016044</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update stage 4 - publish in ci.yml">
+      <option name="closed" value="true" />
+      <created>1761080393373</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1761080393373</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Update stage 4 - publish in ci.yml">
+      <option name="closed" value="true" />
+      <created>1761080757238</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1761080757238</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update stage 4 - publish in ci.yml">
+      <option name="closed" value="true" />
+      <created>1761082875582</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1761082875582</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update stage 3 - publish in ci.yml">
+      <option name="closed" value="true" />
+      <created>1761083204550</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1761083204550</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update stage 3, 4 - publish in ci.yml">
+      <option name="closed" value="true" />
+      <created>1761083634256</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1761083634256</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update stage 4 - publish in ci.yml">
+      <option name="closed" value="true" />
+      <created>1761668334318</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1761668334318</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Update stage 4 - publish in ci.yml">
+      <option name="closed" value="true" />
+      <created>1761668522587</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1761668522587</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Update stage 4 - publish in ci.yml">
+      <option name="closed" value="true" />
+      <created>1761668874509</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1761668874509</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: add test to calculator">
+      <option name="closed" value="true" />
+      <created>1765984162318</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1765984162318</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Фикс ci.yml" />
+    <MESSAGE value="Fix ci.yml" />
+    <MESSAGE value="Add stage 4 - publish in ci.yml" />
+    <MESSAGE value="Update stage 3 - publish in ci.yml" />
+    <MESSAGE value="Update stage 3, 4 - publish in ci.yml" />
+    <MESSAGE value="Update stage 4 - publish in ci.yml" />
+    <MESSAGE value="feat: add test to calculator" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add test to calculator" />
+  </component>
+</project>

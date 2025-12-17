@@ -13,18 +13,21 @@ import org.springframework.stereotype.Service;
 public class CalculatorService {
 
     private final Calculator calculator;
+    private final HistoryService historyService;
 
-    public CalculatorService() {
+    public CalculatorService(HistoryService historyService) {
         this.calculator = new Calculator();
+        this.historyService = historyService;
     }
 
     /**
      * Выполняет математическую операцию на основе запроса.
      *
      * @param request запрос с операцией и операндами
+     * @param sessionId идентификатор сессии
      * @return ответ с результатом
      */
-    public OperationResponse calculate(OperationRequest request) {
+    public OperationResponse calculate(OperationRequest request, String sessionId) {
         String operation = request.getOperation().toUpperCase();
         Double a = request.getA();
         Double b = request.getB();
@@ -61,7 +64,14 @@ public class CalculatorService {
                 throw new IllegalArgumentException("Unsupported operation: " + operation);
         }
 
-        return new OperationResponse(result, operation, expression);
+        OperationResponse response = new OperationResponse(result, operation, expression);
+
+        // Сохраняем в историю
+        if (sessionId != null && !sessionId.isEmpty()) {
+            historyService.saveToHistory(request, response, sessionId);
+        }
+
+        return response;
     }
 
     /**

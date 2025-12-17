@@ -37,6 +37,7 @@ public class CalculatorController {
      * Выполняет математическую операцию.
      *
      * @param request запрос с операцией и операндами
+     * @param sessionId идентификатор сессии
      * @return результат операции
      */
     @PostMapping("/calculate")
@@ -48,8 +49,9 @@ public class CalculatorController {
         @ApiResponse(responseCode = "400", description = "Invalid input")
     })
     public ResponseEntity<OperationResponse> calculate(
-            @Valid @RequestBody OperationRequest request) {
-        OperationResponse response = calculatorService.calculate(request);
+            @Valid @RequestBody OperationRequest request,
+            @org.springframework.web.bind.annotation.RequestHeader(value = "X-Session-Id", defaultValue = "default") String sessionId) {
+        OperationResponse response = calculatorService.calculate(request, sessionId);
         return ResponseEntity.ok(response);
     }
 

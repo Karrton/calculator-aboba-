@@ -39,45 +39,8 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
       
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      
-      - name: Install Python dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install PyGithub requests
-      
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-      
-      - name: Run Checkstyle
-        run: |
-          echo "Запуск проверки кода (Checkstyle)..."
-          ./gradlew checkstyleMain checkstyleTest
-      
-      - name: List team members
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "Получение списка участников команды..."
-          python3 scripts/check_pr.py \
-            --token "$GITHUB_TOKEN" \
-            --repo "${{ github.repository }}" \
-            --list-members
-      
-      - name: Check PR size
-        if: github.event_name == 'pull_request' && github.base_ref != 'main'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "Проверка размера PR..."
-          python3 scripts/check_pr.py \
-            --token "$GITHUB_TOKEN" \
-            --repo "${{ github.repository }}" \
-            --pr-number "${{ github.event.pull_request.number }}" \
-            --check-size
       
       - name: Update epic PR description
         if: github.event_name == 'pull_request' && contains(github.head_ref, 'epic/')

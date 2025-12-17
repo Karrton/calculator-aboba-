@@ -1,0 +1,36 @@
+/* CSS Variables для тем */
+:root {
+  /* Light Theme */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #e0e0e0;
+  --text-primary: #333333;
+  --text-secondary: #757575;
+  --accent: #2196F3;
+  --accent-hover: #1976D2;
+  --danger: #f44336;
+  --success: #4CAF50;
+  --border: #e0e0e0;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Theme */
+body.dark-theme {
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #3d3d3d;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --accent: #64B5F6;
+  --accent-hover: #42A5F5;
+  --danger: #ef5350;
+  --success: #66BB6A;
+  --border: #3d3d3d;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: background 0.3s, color 0.3s;
+}

@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Тесты для класса Calculator.
  * Включает 1 интеграционный тест и 2 unit теста.
  */
-class Person1Test {
+class TestCalculatorOne {
     private Calculator calculator;
 
     @BeforeEach

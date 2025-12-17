@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class subtract_add_subtract {
+class TestCalculatorTwo {
     private Calculator calculator;
 
     @BeforeEach

@@ -120,7 +120,7 @@ jobs:
           retention-days: 7
 
   tests:
-    name: Stage 3 - Unit Tests
+    name: Stage 3 - Tests
     runs-on: ubuntu-latest
     needs: build
     
